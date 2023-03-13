@@ -8,10 +8,10 @@ services:
         working_dir: /application
         command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --innodb-file-per-table=1]
         volumes:
-            - pimcore-database:/var/lib/mysql
+            - rek-lm-pimcore-database:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=ROOT
-            - MYSQL_DATABASE=pimcore
+            - MYSQL_DATABASE=rek_lm_pimcore
             - MYSQL_USER=pimcore
             - MYSQL_PASSWORD=pimcore
 
@@ -26,7 +26,7 @@ services:
             - php
 
     php:
-        #user: '1000:1000' # set to your uid:gid
+        user: '0:0' # set to your uid:gid
         image: pimcore/pimcore:php8.1-debug-latest
         environment:
             COMPOSER_HOME: /var/www/html
@@ -37,7 +37,7 @@ services:
             - .:/var/www/html
 
     supervisord:
-        #user: '1000:1000' # set to your uid:gid
+        user: '0:0' # set to your uid:gid
         image: pimcore/pimcore:php8.1-supervisord-latest
         depends_on:
             - db
@@ -46,4 +46,4 @@ services:
             - ./.docker/supervisord.conf:/etc/supervisor/conf.d/pimcore.conf:ro
 
 volumes:
-    pimcore-database:
+    rek-lm-pimcore-database:
