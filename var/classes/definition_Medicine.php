@@ -16,16 +16,16 @@
  * - dosageForm [input]
  * - procedureType [select]
  * - licenceNumber [numeric]
- * - licenceValidityDate [datetime]
+ * - licenceValidityDate [input]
  * - atcCode [input]
  * - packet [wysiwyg]
  * - activeIngredient [input]
- * - leaflet [link]
- * - characteristic [link]
  * - dutyHolder [manyToOneRelation]
  * - manufacturer [manyToOneRelation]
  * - importer [manyToOneRelation]
  * - exporter [manyToOneRelation]
+ * - leaflet [input]
+ * - characteristic [input]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -34,7 +34,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Medicine',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1678746183,
+   'modificationDate' => 1678795014,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -464,7 +464,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           11 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'licenceValidityDate',
              'title' => 'Licence Validity Date',
              'tooltip' => '',
@@ -475,7 +475,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'datetime',
+             'fieldtype' => 'input',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -483,10 +483,15 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'queryColumnType' => 'bigint(20)',
-             'columnType' => 'bigint(20)',
+             'width' => '',
              'defaultValue' => NULL,
-             'useCurrentDate' => false,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
              'defaultValueGenerator' => '',
           )),
           12 => 
@@ -578,48 +583,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           15 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Link::__set_state(array(
-             'name' => 'leaflet',
-             'title' => 'Leaflet',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'link',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-          )),
-          16 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Link::__set_state(array(
-             'name' => 'characteristic',
-             'title' => 'Characteristic',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'link',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-          )),
-          17 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
              'name' => 'dutyHolder',
              'title' => 'Duty Holder',
@@ -659,7 +622,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
             ),
           )),
-          18 => 
+          16 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
              'name' => 'manufacturer',
              'title' => 'Manufacturer',
@@ -699,7 +662,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
             ),
           )),
-          19 => 
+          17 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
              'name' => 'importer',
              'title' => 'Importer',
@@ -739,7 +702,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
             ),
           )),
-          20 => 
+          18 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
              'name' => 'exporter',
              'title' => 'Exporter',
@@ -778,6 +741,68 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'documentTypes' => 
             array (
             ),
+          )),
+          19 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'leaflet',
+             'title' => 'Leaflet',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'input',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
+          )),
+          20 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'characteristic',
+             'title' => 'Characteristic',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'input',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
           )),
         ),
          'locked' => false,

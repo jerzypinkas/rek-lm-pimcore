@@ -6,7 +6,7 @@
  *
  * Fields Summary:
  * - name [input]
- * - country [country]
+ * - country [input]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -15,7 +15,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Company',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1678745154,
+   'modificationDate' => 1678796077,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -95,7 +95,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Country::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'country',
              'title' => 'Country',
              'tooltip' => '',
@@ -106,7 +106,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'country',
+             'fieldtype' => 'input',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => true,
@@ -115,13 +115,15 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
             ),
              'width' => '',
-             'defaultValue' => NULL,
-             'optionsProviderClass' => NULL,
-             'optionsProviderData' => NULL,
+             'defaultValue' => 'PL',
              'columnLength' => 190,
-             'dynamicOptions' => false,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
              'defaultValueGenerator' => '',
-             'restrictTo' => '',
           )),
         ),
          'locked' => false,
