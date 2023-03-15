@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <h1>{{ pimcore_input("headline", {"width": 540}) }}</h1>
+
+    <div class="products-info">
+{#        {% set product = pimcore_relation("product").element %}#}
+        {% for medicine in medicines %}
+            <div><a href="/medicine/{{ medicine.id }}">{{ medicine.name }}</a></div>
+        {% endfor %}
+    </div>
+    <div style="margin-top: 20px">
+        <span><a href="?page={{ page.prev }}">prev</a></span>
+        <span><a href="?page={{ page.next }}">next</a></span>
+    </div>
+{% endblock %}
