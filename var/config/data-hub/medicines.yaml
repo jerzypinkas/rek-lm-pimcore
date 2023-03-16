@@ -8,7 +8,7 @@ pimcore_data_hub:
                 group: ''
                 active: false
                 path: null
-                modificationDate: 1678965141
+                modificationDate: 1678968362
                 createDate: 1678778196
             loaderConfig:
                 type: asset
@@ -31,7 +31,7 @@ pimcore_data_hub:
                 createLocationStrategy:
                     type: staticPath
                     settings:
-                        path: /med_small_test
+                        path: /medicines
                 locationUpdateStrategy:
                     type: noChange
                 publishingStrategy:

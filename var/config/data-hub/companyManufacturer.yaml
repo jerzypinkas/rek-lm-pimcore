@@ -8,12 +8,12 @@ pimcore_data_hub:
                 group: ''
                 active: false
                 path: null
-                modificationDate: 1678796268
+                modificationDate: 1678965542
                 createDate: 1678795566
             loaderConfig:
                 type: asset
                 settings:
-                    assetPath: /Rejestr_Produktow_Leczniczych_crop.csv
+                    assetPath: /Rejestr_Produktow_Leczniczych.csv
             interpreterConfig:
                 type: csv
                 settings:
