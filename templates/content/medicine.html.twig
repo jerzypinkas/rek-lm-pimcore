@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <h1>{{ pimcore_input("headline", {"width": 540}) }}</h1>
+
+    <div class="product-info">
+        <h2>{{ medicine.name }} ({{ medicine.commonName }}</h2>
+        <div class="content">
+            <div>
+                <ul>Download links:
+                    <li><a href="{{ medicine.leaflet }}">leaflet</a></li>
+                    <li><a href="{{ medicine.characteristic }}">characteristic</a></li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+    </div>
+{% endblock %}

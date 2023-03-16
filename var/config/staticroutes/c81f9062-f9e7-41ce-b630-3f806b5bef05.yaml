@@ -1,0 +1,15 @@
+pimcore:
+    staticroutes:
+        definitions:
+            c81f9062-f9e7-41ce-b630-3f806b5bef05:
+                name: medicine
+                pattern: '/\/medicine\/([0-9]+)/'
+                reverse: /medicine/%%id%%
+                controller: 'App\Controller\ContentController::medicineAction'
+                variables: id
+                defaults: ''
+                siteId: {  }
+                methods: {  }
+                priority: 1
+                creationDate: 1678890096
+                modificationDate: 1678901314

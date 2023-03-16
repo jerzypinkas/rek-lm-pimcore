@@ -1,6 +1,9 @@
 imports:
     - { resource: 'local/' }
 
+pimcore_data_importer:
+    messenger_queue_processing:
+        activated: true
 
 pimcore:
 
